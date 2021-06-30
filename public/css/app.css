@@ -1,0 +1,478 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
+.global__modal--mask {
+  background: rgba(43, 43, 43, 0.8);
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.global__modal--wrapper-small, .global__modal--wrapper-large {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  position: absolute;
+  background: #2C497F;
+}
+.global__modal--wrapper-small {
+  height: 423px;
+}
+.global__modal--wrapper-large {
+  height: 520px;
+}
+.global__modal--content {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  height: 360px;
+  flex: 1;
+  overflow: scroll;
+}
+.global__modal--container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 5px 10px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+}
+.global__modal--header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+.global__modal--header-title {
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.25px;
+  color: #EEF0F2;
+  opacity: 1;
+}
+.global__modal--body {
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 263px;
+  width: 100%;
+}
+.global__modal--body-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  width: 100%;
+}
+.global__modal--body-field {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.global__modal--body-label {
+  font-family: "Noto Sans", sans-serif;
+  text-align: left;
+  font-size: 2rem;
+  opacity: 1;
+  margin-right: 40px;
+}
+.global__modal--body-input {
+  font-size: 1.8rem;
+  outline: 0;
+  background: #EEF0F2 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  width: 212px;
+  height: 30px;
+  padding: 10px;
+}
+.global__modal--body-radio {
+  flex-wrap: wrap;
+  align-items: center;
+  display: inline-flex;
+}
+.global__modal--body-radio--text {
+  font-size: 1.8rem;
+}
+.global__modal--body-radio--input {
+  width: 20px;
+}
+.global__modal--body-radio--label {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.global__modal--body-reply {
+  width: 100%;
+  position: relative;
+}
+.global__modal-special {
+  font-size: 2rem;
+  color: #FF4136;
+  font-family: "Noto Sans", sans-serif;
+}
+.global__modal-title {
+  font-size: 2rem;
+  color: #EEF0F2;
+  font-family: "Noto Sans", sans-serif;
+}
+.global__modal-text {
+  font-family: "Noto Sans", sans-serif;
+  color: #EEF0F2;
+  font-size: 1.8rem;
+  padding-right: 5px;
+}
+.global__modal--extra {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 100%;
+}
+.global__modal--footer {
+  height: 80px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.global__modal--footer-actions {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+.global__modal--footer-actions-button {
+  width: 113px;
+  height: 40px;
+  border-radius: 5px;
+  opacity: 1;
+  outline: 0;
+}
+
+.button-primary {
+  border: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: "bold";
+  font-size: 1.6rem;
+  letter-spacing: 0px;
+  color: #EEF0F2;
+  opacity: 1;
+}
+
+.button-secondary {
+  border: 0;
+  outline: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: "bold";
+  font-size: 1.6rem;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.modal-error {
+  border: 1px solid #FF4136;
+}
+
+.modal-report {
+  border: 1px solid #2ECC40;
+}
+
+@media screen and (max-width: 375px) {
+  .global__modal--body-input {
+    width: auto;
+  }
+}
+.report__field {
+  margin-bottom: 15px;
+}
+.report__data {
+  font-family: "Noto Sans", sans-serif;
+  color: green;
+  font-size: 1.8rem;
+}
+.report__data a {
+  color: #FF4136;
+  font-size: inherit;
+  text-decoration: underline;
+}
+.report__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.report__table {
+  width: 100%;
+  flex: 1;
+  font-family: "Noto Sans", sans-serif;
+}
+.report__table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.report__table thead > tr {
+  text-align: left;
+  font-size: 1.8rem;
+  color: #EEF0F2;
+}
+.report__table tr {
+  height: 22px;
+}
+.report__table-data {
+  font-size: 1.6rem;
+}
+
+.data-white {
+  color: #EEF0F2;
+}
+
+.data-green {
+  color: #2ECC40;
+}
+
+.data-red {
+  color: #FF4136;
+}
+
+html {
+  font-size: 8px;
+}
+
+body {
+  background-color: #E1EBEE;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+a {
+  color: #D77A61;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.box {
+  overflow: hidden;
+  box-shadow: inset 0 0 0 white, 0 22px 70px 4px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 15px;
+  height: 500px;
+  width: 750px;
+  background: radial-gradient(#3f69b8, #2C497F);
+}
+.box__container {
+  width: 100%;
+  height: 100%;
+  font-family: "Noto Sans", sans-serif;
+  color: #EEF0F2;
+}
+.box__header {
+  height: 200px;
+}
+.box__description {
+  height: 100%;
+  padding: 15px;
+}
+.box__title {
+  font-size: 1.8rem;
+  display: inline-block;
+}
+.box__details {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 75%;
+}
+.box__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+.box__form {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 500px;
+}
+.box__form-input {
+  margin: auto;
+  padding-left: 15px;
+  width: 90%;
+  border-radius: 15px;
+  outline: 0;
+  height: 30px;
+  font-size: 1.6rem;
+  font-family: inherit;
+}
+.box__form-input::-moz-placeholder {
+  font-size: 1.6rem;
+}
+.box__form-input:-ms-input-placeholder {
+  font-size: 1.6rem;
+}
+.box__form-input::placeholder {
+  font-size: 1.6rem;
+}
+.box__form-button {
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 4px 10px 4px 10px;
+  margin-top: 15px;
+  border-radius: 15px;
+  outline: 0;
+  border: 0;
+  font-family: inherit;
+}
+.box__footer {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.box__footer-text {
+  font-size: 1.4rem;
+  font-family: "Noto Sans", sans-serif;
+  color: #EEF0F2;
+  position: absolute;
+  bottom: 10px;
+}
+.box__progress {
+  width: 75%;
+  margin: auto;
+}
+.box__progress-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.box__progress-message {
+  color: #EEF0F2;
+  font-size: 1.4rem;
+}
+.box__providers {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box__providers-container {
+  font-size: 1.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.box__providers-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.box__providers-text--red {
+  color: #FF4136;
+}
+.box__providers-text--green {
+  color: #2ECC40;
+}
+.box__providers-icon {
+  margin-right: 5px;
+  border-radius: 50%;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20px;
+}
+.box__spinner {
+  margin-left: 5px;
+  width: 18px;
+}
+
+.text-padding {
+  padding-right: 5px;
+}
+
+.vuejs-progress-bar {
+  width: 100% !important;
+}
+
+#line-progress {
+  width: 100% !important;
+}
+
+.report-link {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.warning-text {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #FF4136;
+          text-decoration-color: #FF4136;
+  text-underline-offset: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 7px;
+  }
+
+  .box__form-input {
+    height: 25px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .box__title {
+    text-align: center;
+    display: block;
+  }
+
+  .box__form {
+    align-items: center;
+  }
+
+  .box__form-button, .box__form-input {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .box__form-button, .box__form-input {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 355px) {
+  html {
+    font-size: 6px;
+  }
+
+  .box__form-button, .box__form-input {
+    width: 90%;
+  }
+}
